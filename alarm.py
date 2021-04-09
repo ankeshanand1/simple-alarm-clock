@@ -50,4 +50,4 @@ if time_diff_seconds < 0:
 time.sleep(diff)
 
 print("Wake Up!")
-playsound('alarmm.mp3')
+playsound('alarm.mp3')
