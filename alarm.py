@@ -3,18 +3,18 @@ import os
 import datetime
 from playsound import playsound
 
-def check(alarm_time):
-	if len(alarm_time) == 1:
-		if alarm_time[0] < 24 and alarm_time[0] >= 0:
+def check(time):
+	if len(time) == 1:
+		if time[0] < 24 and alarm_time[0] >= 0:
 			return True
-	if len(alarm_time) == 2: # [Hour:Minute] Format
-		if alarm_time[0] < 24 and alarm_time[0] >= 0 and \
-		   alarm_time[1] < 60 and alarm_time[1] >= 0:
+	if len(time) == 2: # [Hour:Minute] Format
+		if time[0] < 24 and alarm_time[0] >= 0 and \
+		   time[1] < 60 and alarm_time[1] >= 0:
 			return True
-	elif len(alarm_time) == 3: # [Hour:Minute:Second] Format
-		if alarm_time[0] < 24 and alarm_time[0] >= 0 and \
-		   alarm_time[1] < 60 and alarm_time[1] >= 0 and \
-		   alarm_time[2] < 60 and alarm_time[2] >= 0:
+	elif len(time) == 3: # [Hour:Minute:Second] Format
+		if time[0] < 24 and alarm_time[0] >= 0 and \
+		   time[1] < 60 and alarm_time[1] >= 0 and \
+		   time[2] < 60 and alarm_time[2] >= 0:
 			return True
 	else:
     return False
@@ -24,7 +24,7 @@ print("Set the Alarm Time (Format: HH:MM or HH:MM:SS) : ")
 while True:
 	alarm_input = input(">> ")
 	try:
-		alarm_time = [int(n) for n in alarm_input.split(":")]
+		time = [int(n) for n in alarm_input.split(":")]
 		if check_alarm_input(alarm_time):
 			break
 		else:
