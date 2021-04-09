@@ -54,4 +54,4 @@ print("Alarm set to go off in:",datetime.timedelta(seconds=diff))
 time.sleep(diff)
 
 print("Wake Up!")
-playsound('alarm.mp3')
+playsound('/root/alarm/alarm.mp3')
